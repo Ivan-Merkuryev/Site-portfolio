@@ -1,0 +1,213 @@
+//main: ../outline.less
+
+@import "vars";
+
+.container_hidden {
+  overflow: hidden;
+  position: relative;
+}
+.nav {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  margin-top: 0.5%;
+  position: absolute;
+  top: 0;
+}
+
+.logo_img {
+  width: calc(30px + 3.8%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.logo_span {
+  display: block;
+}
+
+.logo_link {
+  margin-left: 3%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.logo_text {
+  align-items: center;
+  margin-left: 1%;
+  font-size: calc(11px + 0.3vw);
+  z-index: 1;
+  padding: 0.5em 0 0.5em 0;
+}
+.fa {
+  padding: 10px;
+}
+
+@media @breakpoint-desktop {
+  .menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    position: absolute;
+  }
+
+  .menu_desktop_mobile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .menu-button {
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    margin-right: 50px;
+    background: right / 0% 100% no-repeat
+      linear-gradient(45deg, #5fa4bd, #4e90a6);
+    border-radius: 25px;
+
+    transition: background-size 0.4s;
+  }
+
+  .menu-button:hover {
+    background: left / 100% 100% no-repeat
+      linear-gradient(45deg, #5fa4bd, #4e90a6);
+    border-radius: 25px;
+  }
+
+  /*Выпадающий список*/
+  li {
+    list-style: none;
+    position: relative;
+  }
+
+  .menu-shop {
+    position: absolute;
+    display: none;
+    padding-left: 0px;
+  }
+
+  .nav_btn:hover .menu-shop {
+    display: block;
+  }
+
+  .menu-shop:hover li {
+    display: block;
+  }
+
+  .menu-button_shop {
+    margin-top: 10px;
+  }
+}
+
+/*Кнопка мобильного меню*/
+.menu-mobile {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  z-index: 2;
+  display: none;
+}
+
+.menu-mobile {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  z-index: 2;
+  display: none;
+}
+
+.menu-mobile span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: black;
+  left: 5px;
+  transition: transform 0.4s, opacity 0.3s, background-color 0.3s;
+}
+
+.menu-mobile span:nth-child(1) {
+  transform: translateY(-10px);
+}
+/*.menu-mobile span:nth-child(2) {
+}*/
+.menu-mobile span:nth-child(3) {
+  transform: translateY(10px);
+}
+
+/*Крестик*/
+.menu.open .menu-mobile span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+.menu.open .menu-mobile span:nth-child(2) {
+  opacity: 0;
+}
+.menu.open .menu-mobile span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
+}
+
+@media @breakpoint-mobile {
+  ul {
+    margin: 0;
+  }
+  /*мобильное меню*/
+  .nav {
+    display: flex;
+  }
+
+  .menu {
+    display: block;
+    background-color: #fafafa;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  li {
+    list-style: none;
+    padding: 15px;
+  }
+
+  li a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .menu-shop {
+    padding-left: 0;
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .menu_desktop_mobile {
+    position: absolute;
+    right: -150px;
+    top: 0;
+    background-color: #fafafa8d;
+    width: 150px;
+    display: block;
+    z-index: 1;
+    padding: 50px 0px 0 0;
+    visibility: hidden;
+    transition: transform 0.5s, visibility 0.5s;
+  }
+
+  .menu.open .menu_desktop_mobile {
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+}

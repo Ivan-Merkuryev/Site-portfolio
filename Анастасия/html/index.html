@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="container">
+      <img class="bg" src="../img/bg.PNG" alt="" />
+      <!--Меню-->
+      <div class="nav">
+        <!--Логотип-->
+        <a class="logo_link" href="index.html">
+          <img class="logo_img" src="../img/logo.PNG" alt="Логотип" />
+          <span class="logo_text"
+            >Ближайшая к <br />
+            Солнцу планета</span
+          ></a
+        >
+        <!--Ссылки на страницы-->
+        <nav class="menu">
+          <ul class="menu_desktop_mobile">
+            <li>
+              <a class="menu-button" href="job.html">Работы</a>
+            </li>
+            <li>
+              <a class="menu-button" href="Exhibition.html">Выставки</a>
+            </li>
+            <li class="nav_btn">
+              <a class="menu-button" href="shop.html"
+                ><i class="fa fa-thin fa-cart-shopping"></i>Магазин
+                <i class="fa  fa-caret-down"></i>
+              </a>
+              <!--Выпадающий список-->
+              <ul class="menu-shop">
+                <li class="menu-button_shop">
+                  <a class="menu-button" href="#">Наброски</a>
+                </li>
+                <li class="menu-button_shop">
+                  <a class="menu-button" href="#">Эскизы</a>
+                </li>
+                <li class="menu-button_shop">
+                  <a class="menu-button" href="#">Картины</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!--Кнопка бургер-->
+          <button class="menu-mobile" id="#menu-mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!--Карусель-->
+      <div class="carousel-container">
+        <div class="carousel my-carousel carousel--translate">
+          <input
+            class="carousel__activator"
+            type="radio"
+            name="carousel"
+            id="img1"
+            checked="checked"
+          />
+          <input
+            class="carousel__activator"
+            type="radio"
+            name="carousel"
+            id="img2"
+          />
+          <input
+            class="carousel__activator"
+            type="radio"
+            name="carousel"
+            id="img3"
+          />
+          <input
+            class="carousel__activator"
+            type="radio"
+            name="carousel"
+            id="img4"
+          />
+
+          <div class="carousel__controls">
+            <label
+              class="carousel__control carousel__control--backward"
+              for="img4"
+            ></label>
+            <label
+              class="carousel__control carousel__control--forward"
+              for="img2"
+            ></label>
+          </div>
+          <div class="carousel__controls">
+            <label
+              class="carousel__control carousel__control--backward"
+              for="img1"
+            ></label>
+            <label
+              class="carousel__control carousel__control--forward"
+              for="img3"
+            ></label>
+          </div>
+          <div class="carousel__controls">
+            <label
+              class="carousel__control carousel__control--backward"
+              for="img2"
+            ></label>
+            <label
+              class="carousel__control carousel__control--forward"
+              for="img4"
+            ></label>
+          </div>
+          <div class="carousel__controls">
+            <label
+              class="carousel__control carousel__control--backward"
+              for="img3"
+            ></label>
+            <label
+              class="carousel__control carousel__control--forward"
+              for="img1"
+            ></label>
+          </div>
+          <div class="carousel__track">
+            <li class="carousel__slide"></li>
+            <li class="carousel__slide"></li>
+            <li class="carousel__slide"></li>
+            <li class="carousel__slide"></li>
+            <li class="carousel__slide"></li>
+          </div>
+          <div class="carousel__indicators">
+            <label class="carousel__indicator" for="img1"></label>
+            <label class="carousel__indicator" for="img2"></label>
+            <label class="carousel__indicator" for="img3"></label>
+            <label class="carousel__indicator" for="img4"></label>
+          </div>
+        </div>
+      </div>
+      <!--Текст-->
+      <div class="content">
+        <h1>Анастасия Меркурьева</h1>
+        <p class="text">
+          Здравствуйте, меня зовут Меркурьева Анастасия, и я художник.
+        </p>
+        <p class="text">
+          Я люблю творить и создавать новое, больше всего мне нравится работать
+          с натуры люблю рисовать наброски, сохряняя мгновения жизни. Писать
+          этюды, как бы пропуская через себя природу, изображать ее на холсте.
+          Увлекаюсь созданием картин по мотивам своих зарисовок.
+        </p>
+        <p class="text">
+          Профессию я начала осваивать в 15 лет, когда поступила в Абрамцевский
+          колледж имени Васнецова на специальность художник косторез, учиться
+          было очень интересно.
+        </p>
+        <p class="text">
+          Колледж я успешно закончила и сейчас я учусь в Строгановском
+          университере на факультете Монументально-декоративной живописи. Да, я
+          практически кардинально поменяла вектор своего творчества. Посмотрим,
+          что из этого получится!
+        </p>
+        <h2>Мои контакты</h2>
+
+        <!--Иконки контакты-->
+        <ul class="icons">
+          <li class="icons_list">
+            <a class="vk icons_list-link" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="icons_list">
+            <a class="instagram icons_list-link" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="icons_list">
+            <a class="email icons_list-link" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <i class="fa fa-thin fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+
+    <script src="../menu.js"></script>
+    
+    <script src="https://kit.fontawesome.com/158e2d5da2.js" crossorigin="anonymous"></script>
+  </body>
+</html>

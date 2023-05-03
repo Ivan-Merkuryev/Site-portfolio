@@ -1,0 +1,38 @@
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
+  margin: 0;
+}
+
+@import "blocks/menu";
+
+@import "blocks/title";
+
+.gallery {
+  max-width: 1200px;
+  column-count: 4;
+  column-gap: 2vw;
+  margin: 0 auto;
+  padding: 0 2vw 0 2vw;
+  .gallery-masonry {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 2vw;
+    break-inside: avoid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    img {
+      max-width: 100%;
+      display: block;
+      grid-row: 1 / -1;
+      grid-column: 1;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .gallery {
+    column-count: 2;
+  }
+}

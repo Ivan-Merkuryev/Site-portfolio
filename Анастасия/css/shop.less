@@ -1,0 +1,232 @@
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
+  margin: 0;
+}
+@import "blocks/vars";
+
+@import "blocks/menu";
+
+@import "blocks/title";
+
+/*:root {
+  --gradient-1: linear-gradient(-45deg, #c0cdea 10%, #efefef 90%);
+  --gradient-2: linear-gradient(-90deg, #7dd5f5 10%, #efefef 90%);
+  --gradient-3: linear-gradient(-45deg, #edf4d5 10%, #efefef 90%);
+  --gradient-4: linear-gradient(-90deg, #778aaddf 10%, #efefef 90%);
+}*/
+
+main > p {
+  text-align: center;
+  font-size: @fsize;
+}
+/*Кнопка корзины*/
+.nav_shopping_cart {
+  display: flex;
+  margin: 4vh 2vh;
+  justify-content: right;
+}
+
+.shopping_cart {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #9cb4e9;
+  border-radius: 20px;
+  padding: 1vw;
+}
+
+.shopping_cart:hover {
+  background-color: #80a5f7;
+}
+
+/*Фильтер товаров*/
+.filter {
+  display: flex;
+  justify-content: right;
+}
+
+.button {
+  margin-right: 1.5%;
+  padding: 0.6%;
+  font-size: @fsize;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  color: #878787;
+  font-family: "Roboto Slab", serif;
+}
+.button:hover {
+  color: #000000;
+}
+
+.product_cards {
+  display: grid;
+  justify-content: center;
+  row-gap: 2vw;
+  margin: 4vh auto;
+}
+
+/*Карточка товара*/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: @gradient-1;
+}
+/*Блок с фотографией*/
+.img {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.product-item {
+  width: 100%;
+  max-height: 40vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*Блок с информацией*/
+.content {
+  display: grid;
+  align-content: space-evenly;
+  justify-items: stretch;
+  padding: 5%;
+}
+
+.content-title {
+  font-size: calc(12px + 1vh);
+}
+
+.subtitle {
+  font-size: @fsize;
+  padding-bottom: 1em;
+  border-bottom: solid 1px silver;
+}
+
+/*Читать далее*/
+.myBtn,
+.dots {
+  display: none;
+}
+
+.size,
+.buy,
+.nav_shopping_cart {
+  font-size: @fsize;
+}
+
+.price {
+  font-size: calc(9px + 0.65vw);
+  margin: 2% 0;
+}
+
+.buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(45px + 5.5vw);
+  padding: 2%;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(#0a95d5 10%, #579cf5 90%);
+  color: #fff;
+  border-radius: 20px;
+  font-family: "Roboto Slab", serif;
+  max-width: 120px;
+}
+
+.buy:hover {
+  background: #579cf5;
+}
+
+.fa-solid {
+  margin-right: 0.5em;
+}
+
+.hide {
+  display: none;
+}
+/*Фоны*/
+.container1 {
+  background: @gradient-2;
+}
+.container2 {
+  background: @gradient-3;
+}
+.container3 {
+  background: @gradient-4;
+}
+
+@media (max-width: 992px) {
+  .product_cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .content {
+    align-content: flex-start;
+  }
+
+  .subtitle {
+    margin-block-end: 0em;
+    font-size: calc(8px + 0.6vw);
+    border-bottom: 0;
+    padding-bottom: 0;
+    height: 2.5em;
+    overflow: hidden;
+  }
+
+  /*Читать далее*/
+  .myBtn {
+    display: inline;
+    width: calc(70px + 5.5vw);
+    border: none;
+    background: none;
+    color: #878787;
+    font-family: "Roboto Slab", serif;
+    cursor: pointer;
+    font-size: calc(6px + 0.6vw);
+    border-bottom: solid 1px silver;
+  }
+
+  .myBtn:hover {
+    color: #000;
+  }
+
+  .myBtn::before {
+    content: "Читать далее";
+  }
+
+  .active .myBtn::before {
+    content: "Скрыть";
+  }
+
+  .active .subtitle {
+    height: auto;
+  }
+
+  .size {
+    margin-top: 1em;
+  }
+}

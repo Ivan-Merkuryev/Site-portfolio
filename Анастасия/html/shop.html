@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Магазин</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/shop.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container_hidden">
+      <header class="header-container">
+        <!--Меню-->
+        <div class="nav">
+          <!--Логотип-->
+          <a class="logo_link" href="index.html">
+            <img class="logo_img" src="../img/logo.PNG" alt="Логотип" />
+            <span  class="logo_text"
+              >Ближайшая к <br />
+              Солнцу планета</span
+            ></a
+          >
+          <!--Ссылки на страницы-->
+          <nav class="menu">
+            <ul class="menu_desktop_mobile">
+              <li>
+                <a class="menu-button" href="job.html">Работы</a>
+              </li>
+              <li>
+                <a class="menu-button" href="Exhibition.html">Выставки</a>
+              </li>
+              <li class="nav_btn">
+                <a class="menu-button" href="shop.html"
+                  ><i class="fa fa-thin fa-cart-shopping"></i>Магазин
+                  <i class="fa fa-caret-down"></i>
+                </a>
+                <!--Выпадающий список-->
+                <ul class="menu-shop">
+                  <li class="menu-button_shop">
+                    <a class="menu-button" href="#">Наброски</a>
+                  </li>
+                  <li class="menu-button_shop">
+                    <a class="menu-button" href="#">Эскизы</a>
+                  </li>
+                  <li class="menu-button_shop">
+                    <a class="menu-button" href="#">Картины</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!--Кнопка мобильного меню-->
+            <button class="menu-mobile" id="#menu-mobile">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </nav>
+        </div>
+      </header>
+      <!--Магазин-->
+      <main>
+        <h1 class="title">Магазин</h1>
+        <p>Здесь Вы можете приобрести мои работы.</p>
+        <nav class="nav_shopping_cart">
+          <a class="shopping_cart" href="../html/basket.html">
+            <i class="fa fa-thin fa-cart-shopping"></i>Корзина <div>(0)</div></a
+          >
+        </nav>
+        <!--Фильтр товаров-->
+        <div class="filter">
+          <button class="button" data-filter="all">Все</button>
+          <button class="button" data-filter="outline">Наброски</button>
+          <button class="button" data-filter="sketches">Эскизы</button>
+          <button class="button" data-filter="paintings">Картины</button>
+        </div>
+        <div class="product_cards">
+          <!--Карточка товара-->
+          <div class="container card outline">
+            <!--Блок с фотографией-->
+            <div class="img">
+              <img class="product-item" src="../img/cart1.jpg" alt="" />
+            </div>
+            <!--Блок с информацией-->
+            <div class="content">
+              <h2 class="content-title">Набросок</h2>
+              <p class="subtitle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Possimus in aspernatur qui commodi pariatur sit consequuntur
+                optio perspiciatis officia quam?
+              </p>
+              <button class="myBtn"></button>
+              <span class="size">Размер:</span>
+              <span class="price">Цена:</span>
+              <button data-id="1o111" class="buy">
+                <i class="fa-solid fa-cart-plus"></i> Купить
+              </button>
+            </div>
+          </div>
+          <!--Карточка товара-->
+          <div class="container container1 card outline">
+            <!--Блок с фотографией-->
+            <div class="img">
+              <img class="product-item" src="../img/cart2.jpg" alt="" />
+            </div>
+            <!--Блок с информацией-->
+            <div class="content">
+              <h2 class="content-title">Набросок</h2>
+              <p class="subtitle">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+                unde ut, molestiae dicta hic commodi laboriosam pariatur
+                perspiciatis quisquam suscipit. Perferendis sint, adipisci
+                similique quo culpa suscipit consectetur velit voluptatem.
+              </p>
+              <button class="myBtn"></button>
+              <span class="size">Размер:</span>
+              <span class="price">Цена:</span>
+              <button  data-id="1o112" class="buy">
+                <i class="fa-solid fa-cart-plus"></i> Купить
+              </button>
+            </div>
+          </div>
+
+          <!--Карточка товара-->
+          <div class="container container2 card sketches">
+            <!--Блок с фотографией-->
+            <div class="img">
+              <img class="product-item" src="../img/cart3.jpg" alt="" />
+            </div>
+            <!--Блок с информацией-->
+            <div class="content">
+              <h2 class="content-title">Эскиз</h2>
+              <p class="subtitle">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
+                ullam perferendis vero itaque corrupti, quas excepturi veniam
+                eaque hic dolores eius nulla eum quam amet distinctio illo
+                officia enim doloremque!
+              </p>
+              <button class="myBtn"></button>
+              <span class="size">Размер:</span>
+              <span class="price">Цена:</span>
+              <button class="buy">
+                <i class="fa-solid fa-cart-plus"></i> Купить
+              </button>
+            </div>
+          </div>
+
+          <!--Карточка товара-->
+          <div class="container container3 card paintings">
+            <!--Блок с фотографией-->
+            <div class="img">
+              <img class="product-item" src="../img/cart4.jpg" alt="" />
+            </div>
+            <!--Блок с информацией-->
+            <div class="content">
+              <h2 class="content-title">Картина</h2>
+              <p class="subtitle">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Consequatur quisquam magnam ratione, dolor amet ad, provident
+                autem dicta nesciunt at, voluptatibus doloremque similique
+                tenetur. Culpa expedita illum accusamus voluptate dolorem?
+              </p>
+              <button class="myBtn"></button>
+              <span class="size">Размер:</span>
+              <span class="price">Цена:</span>
+              <button class="buy">
+                <i class="fa-solid fa-cart-plus"></i> Купить
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../shop.js"></script>
+    <script src="https://kit.fontawesome.com/158e2d5da2.js" crossorigin="anonymous"></script>
+  </body>
+</html>
